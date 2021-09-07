@@ -1,9 +1,11 @@
+import Test from './Test';
+
 function App() {
   return (
-    <div className='App'>
+    <div className="App">
       <div>Polina</div>
       <Test />
-      <header className='App-header' />
+      <header className="App-header" />
     </div>
   );
 }
