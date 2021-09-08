@@ -1,4 +1,6 @@
-const FETCH_DATA = 'setbook';
+/* eslint-disable quotes, jsx-quotes, no-unused-vars, no-console */
+
+const FETCH_DATA = "fetchdata";
 const initialState = [];
 
 export const loadApi = (payload) => ({
@@ -9,8 +11,14 @@ export const loadApi = (payload) => ({
 const reducer = (state = initialState, action) => {
   switch (action.type) {
     case FETCH_DATA: {
-      const fetchedData = action.payload.name;
-      return fetchedData;
+      // const fetchedData = {
+      //   ...state,
+      //   ...action.payload,
+      // };
+
+      const saved = Object(action.payload);
+
+      return saved;
     }
     default:
       return state;

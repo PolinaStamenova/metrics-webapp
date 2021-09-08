@@ -1,4 +1,4 @@
-/* eslint-disable quotes, jsx-quotes, no-unused-vars */
+/* eslint-disable quotes, jsx-quotes, no-unused-vars, no-console */
 
 import axios from "axios";
 import { useSelector, useDispatch } from "react-redux";
@@ -6,34 +6,32 @@ import { useEffect } from "react";
 import { loadApi } from "./redux/Reducer";
 
 const Test = () => {
-  const data = useSelector((state) => state.data);
+  const polina = useSelector((state) => state.polina);
+
   const dispatch = useDispatch();
 
   const url = "https://api.openweathermap.org/data/2.5/weather?";
   const apiKey = "7d21fcc19d2a5ea9e47384b584b78a2e";
 
-  const city = "Berlin";
+  const cityAPI = ["London", "Berlin", "Manila"];
 
   const fetchApi = async () => {
-    const data = await axios
-      .get(`${url}q=${city}&appid=${apiKey}`)
-      .then((res) => res.data)
-      .catch((error) => error);
-    console.log(data);
-    console.log(typeof data);
+    const city = await axios
+      .get(`${url}q=${cityAPI}&appid=${apiKey}`)
+      .then((res) => res.data);
+    console.log(city);
+    // const city = { name: "Polina" };
 
-    dispatch(loadApi(data));
+    dispatch(loadApi(city));
   };
 
   useEffect(() => {
     fetchApi();
+    console.log("WORKS");
   }, []);
 
-  return (
-    <div>
-      <div>Jessie</div>
-    </div>
-  );
+  console.log(polina);
+  return <div>pppp</div>;
 };
 
 export default Test;
