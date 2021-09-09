@@ -53,11 +53,3 @@ const Api = () => {
 };
 
 export default Api;
-
-// const keys = Object.values(data);
-// const propertyValues = Object.entries(data);
-
-// console.log(propertyValues[0].status);
-// const newData = data[0].data.list[1].name;
-
-// console.log(propertyValues[0]);
