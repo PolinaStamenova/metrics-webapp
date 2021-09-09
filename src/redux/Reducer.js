@@ -11,14 +11,14 @@ export const loadApi = (payload) => ({
 const reducer = (state = initialState, action) => {
   switch (action.type) {
     case FETCH_DATA: {
-      // const fetchedData = {
-      //   ...state,
-      //   ...action.payload,
-      // };
+      const fetchedData = {
+        ...state,
+        ...action.payload,
+      };
 
-      const saved = Object(action.payload);
+      // const saved = Object.entries(action.payload);
 
-      return saved;
+      return fetchedData;
     }
     default:
       return state;

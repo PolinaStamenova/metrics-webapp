@@ -3,10 +3,10 @@
 import axios from "axios";
 import { useSelector, useDispatch } from "react-redux";
 import { useEffect } from "react";
-import { loadApi } from "./redux/Reducer";
+import { loadApi } from "./Reducer";
 
-const Test = () => {
-  const polina = useSelector((state) => state.polina);
+const Api = () => {
+  const polina = useSelector((state) => state);
 
   const dispatch = useDispatch();
 
@@ -31,7 +31,7 @@ const Test = () => {
   }, []);
 
   console.log(polina);
-  return <div>pppp</div>;
+  return <div>{polina.name}</div>;
 };
 
-export default Test;
+export default Api;
