@@ -11,14 +11,9 @@ export const loadApi = (payload) => ({
 const reducer = (state = initialState, action) => {
   switch (action.type) {
     case FETCH_DATA: {
-      const fetchedData = {
-        ...state,
-        ...action.payload,
-      };
+      // const fetchedData = [...state, ...action.payload];
 
-      // const saved = Object.entries(action.payload);
-
-      return fetchedData;
+      return action.payload;
     }
     default:
       return state;
@@ -26,3 +21,16 @@ const reducer = (state = initialState, action) => {
 };
 
 export default reducer;
+
+// const saved = Object.entries(action.payload).map(([key, value]) => ({
+//   item_id: key,
+//   title: value[0].title,
+//   category: value[0].category,
+//   author: 'Author undefiend',
+//   progress: {
+//     currentChapter: 'Introduction',
+//     completed: '0',
+//   },
+// }));
+
+// const saved = Object.entries(action.payload);

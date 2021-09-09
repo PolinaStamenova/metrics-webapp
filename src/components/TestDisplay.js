@@ -1,15 +1,18 @@
 /* eslint-disable quotes, jsx-quotes */
 
-import { useSelector } from "react-redux";
+import React from "react";
+import PropTypes from "prop-types";
 
-const TestDisplay = () => {
-  const data = useSelector((state) => state);
+const TestDisplay = ({ name, temp }) => (
+  <div>
+    <p>{name}</p>
+    <p>{temp}</p>
+  </div>
+);
 
-  return (
-    <div>
-      <div>{data.id}</div>
-    </div>
-  );
+TestDisplay.propTypes = {
+  name: PropTypes.string.isRequired,
+  temp: PropTypes.number.isRequired,
 };
 
 export default TestDisplay;
