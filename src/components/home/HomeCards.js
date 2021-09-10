@@ -4,7 +4,7 @@ import React from "react";
 import PropTypes from "prop-types";
 
 const HomeCards = ({ name, temp }) => {
-  const pol = "jjjjj";
+  const polina = useSelector((state) => state.cities);
 
   return (
     <li className='card'>
