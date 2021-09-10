@@ -26,12 +26,12 @@ const Api = () => {
     const city = await axios
       .all([axiosOulu, axiosHelsinki, axiosTornio])
       .then((res) => {
-        console.log(res);
         res.forEach((item) => item.data.list[0].main.temp);
         const data = res.map((item) => ({
           name: item.data.list[0].name,
           temp: item.data.list[0].main.temp,
         }));
+
         dispatch(loadApi(data));
       });
   };

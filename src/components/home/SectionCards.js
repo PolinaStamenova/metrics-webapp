@@ -4,7 +4,6 @@ import React from "react";
 import { useSelector } from "react-redux";
 import "./SectionCards.css";
 import HomeCards from "./HomeCards";
-import Api from "../../redux/Api";
 
 const SectionCards = () => {
   const citiesData = useSelector((state) => state.cities);
@@ -12,7 +11,11 @@ const SectionCards = () => {
   return (
     <section className='section-cities'>
       <h5 className='section-cities-title'>Status by cities</h5>
-      <ul>lll</ul>
+      <ul>
+        {citiesData.map((city) => (
+          <HomeCards name={city.name} temp={city.temp} key={city.name} />
+        ))}
+      </ul>
     </section>
   );
 };
