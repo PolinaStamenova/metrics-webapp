@@ -2,6 +2,9 @@
 
 import React from "react";
 import { Link } from "react-router-dom";
+import "./Details.css";
+import CityMain from "./home/CityMain";
+import City from "./home/City";
 
 const Details = () => (
   <div>
@@ -17,7 +20,9 @@ const Details = () => (
         </div>
       </nav>
     </header>
+    <CityMain />
     <h5 className='section-cities-title'>Temperature details by city</h5>
+    <City />
   </div>
 );
 

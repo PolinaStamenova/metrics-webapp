@@ -38,7 +38,6 @@ const Api = () => {
   useEffect(() => {
     fetchApi();
   }, []);
-  console.log(data);
 
   return "polina";
 };
