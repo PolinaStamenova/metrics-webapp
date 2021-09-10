@@ -1,6 +1,7 @@
 /* eslint-disable quotes, jsx-quotes, no-unused-vars */
 
 import React from "react";
+import { Link } from "react-router-dom";
 import { useSelector } from "react-redux";
 import "./SectionCards.css";
 import HomeCards from "./HomeCards";
@@ -13,7 +14,9 @@ const SectionCards = () => {
       <h5 className='section-cities-title'>Status by cities</h5>
       <ul className='cards-list'>
         {citiesData.map((city) => (
-          <HomeCards name={city.name} temp={city.temp} key={city.name} />
+          <Link className='link' to='/city' key={city.name}>
+            <HomeCards name={city.name} temp={city.temp} key={city.name} />
+          </Link>
         ))}
       </ul>
     </section>
@@ -22,7 +25,9 @@ const SectionCards = () => {
 
 export default SectionCards;
 
-//  {/* {citiesData.map((city) => (
-//           <HomeCards key={city.name} name={city.name} temp={city.temp} />
-//         ))} */}
-//         {/* <Api /> */}
+// <Router basename='/' key={city.name}>
+// <Switch>
+//   {/* <Route path='/' component={HomeCards} /> */}
+//   <Route path='/city' component={Details} />
+// </Switch>
+// </Router>

@@ -11,7 +11,6 @@ const HomeCards = ({ name, temp }) => (
       <img className='city-image' src={spain} alt='Cityimage' />
       <i className='far fa-arrow-alt-circle-right fa-lg' />
     </div>
-
     <div className='card-content'>
       <h2 className='card-title'>{name}</h2>
       <p className='card-temp'>{temp} ℃</p>

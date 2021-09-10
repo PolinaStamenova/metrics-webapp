@@ -15,7 +15,6 @@
 }
 
 .card {
-  /* text-align: end; */
   padding: 0.7rem 0.5rem;
   display: flex;
   flex-direction: column;
