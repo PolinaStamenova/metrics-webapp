@@ -24,10 +24,3 @@ const SectionCards = () => {
 };
 
 export default SectionCards;
-
-// <Router basename='/' key={city.name}>
-// <Switch>
-//   {/* <Route path='/' component={HomeCards} /> */}
-//   <Route path='/city' component={Details} />
-// </Switch>
-// </Router>
