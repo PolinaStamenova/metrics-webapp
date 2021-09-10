@@ -1,0 +1,10 @@
+.section-cities {
+  background-color: rgba(0, 0, 0, 0.06);
+}
+
+.section-cities-title {
+  text-transform: uppercase;
+  font-family: "Lato", sans-serif;
+  padding: 0.25rem 0.6rem;
+  font-size: 14px;
+}

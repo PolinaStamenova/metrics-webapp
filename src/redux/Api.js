@@ -4,11 +4,10 @@ import axios from "axios";
 import { useSelector, useDispatch } from "react-redux";
 import { useEffect } from "react";
 import { loadApi } from "./Reducer";
-import TestDisplay from "../components/TestDisplay";
+import HomeCards from "../components/home/HomeCards";
 
 const Api = () => {
-  const data = useSelector((state) => state);
-
+  const data = useSelector((state) => state.cities);
   const dispatch = useDispatch();
 
   const url = "https://api.openweathermap.org/data/2.5/find?";
@@ -28,9 +27,7 @@ const Api = () => {
       .all([axiosOulu, axiosHelsinki, axiosTornio])
       .then((res) => {
         console.log(res);
-        res.forEach((item) => {
-          console.log(item.data.list[0].main.temp);
-        });
+        res.forEach((item) => item.data.list[0].main.temp);
         const data = res.map((item) => ({
           name: item.data.list[0].name,
           temp: item.data.list[0].main.temp,
@@ -46,7 +43,7 @@ const Api = () => {
   return (
     <div>
       {data.map((city) => (
-        <TestDisplay name={city.name} temp={city.temp} key={city.name} />
+        <HomeCards name={city.name} temp={city.temp} key={city.name} />
       ))}
     </div>
   );
