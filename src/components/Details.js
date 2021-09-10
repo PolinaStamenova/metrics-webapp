@@ -1,18 +1,7 @@
 /* eslint-disable quotes, jsx-quotes */
 
 import React from "react";
-import PropTypes from "prop-types";
 
-const TestDisplay = ({ name, temp }) => (
-  <div>
-    <p>{name}</p>
-    <p>{temp}</p>
-  </div>
-);
+const Details = () => <div>WORKSSSSSSS</div>;
 
-TestDisplay.propTypes = {
-  name: PropTypes.string.isRequired,
-  temp: PropTypes.number.isRequired,
-};
-
-export default TestDisplay;
+export default Details;

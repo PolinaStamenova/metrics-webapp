@@ -13,7 +13,7 @@ const Api = () => {
   const url = "https://api.openweathermap.org/data/2.5/find?";
   const apiKey = "7d21fcc19d2a5ea9e47384b584b78a2e";
 
-  const cities = ["Madrid", "Barcelona", "Ibiza"];
+  const cities = ["Madrid", "Barcelona", "Ibiza", "Tolledo"];
 
   const request = (city) =>
     axios.get(`${url}q=${city}&units=metric&appid=${apiKey}`);
@@ -40,13 +40,7 @@ const Api = () => {
     fetchApi();
   }, []);
 
-  return (
-    <div>
-      {data.map((city) => (
-        <HomeCards name={city.name} temp={city.temp} key={city.name} />
-      ))}
-    </div>
-  );
+  return "polina";
 };
 
 export default Api;

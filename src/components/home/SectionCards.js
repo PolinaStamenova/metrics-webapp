@@ -11,7 +11,7 @@ const SectionCards = () => {
   return (
     <section className='section-cities'>
       <h5 className='section-cities-title'>Status by cities</h5>
-      <ul>
+      <ul className='cards-list'>
         {citiesData.map((city) => (
           <HomeCards name={city.name} temp={city.temp} key={city.name} />
         ))}
