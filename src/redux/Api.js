@@ -41,7 +41,7 @@ const Api = () => {
   useEffect(() => {
     fetchApi();
   }, []);
-  return "polina";
+  return "";
 };
 
 export default Api;

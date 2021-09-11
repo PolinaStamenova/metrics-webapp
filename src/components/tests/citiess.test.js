@@ -1,6 +1,6 @@
-import reducer, { loadCountries, loadCountry } from "./cities";
+import reducer, { loadCountries, loadCountry } from './cities';
 
-test("should return the initial state", () => {
+test('should return the initial state', () => {
   const initialState = {
     totalConfirmed: 0,
     items: [],
@@ -12,14 +12,14 @@ test("should return the initial state", () => {
   expect(newState).toEqual(initialState);
 });
 
-test("should handle adding countries", () => {
+test('should handle adding countries', () => {
   const prevState = {
     totalConfirmed: 0,
     items: [],
   };
   const items = [
-    { country: "Testing country 1", confirmed: 3 },
-    { country: "Testing country 2", confirmed: 2 },
+    { country: 'Testing country 1', confirmed: 3 },
+    { country: 'Testing country 2', confirmed: 2 },
   ];
 
   const newState = reducer(
@@ -27,7 +27,7 @@ test("should handle adding countries", () => {
     loadCountries({
       items,
       totalConfirmed: 5,
-    })
+    }),
   );
 
   expect(newState).toEqual({
@@ -36,7 +36,7 @@ test("should handle adding countries", () => {
   });
 });
 
-test("should handle adding selected country", () => {
+test('should handle adding selected country', () => {
   const prevState = {
     totalConfirmed: 0,
     items: [],
@@ -44,7 +44,7 @@ test("should handle adding selected country", () => {
   };
   const data = {
     All: {
-      country: "Testing",
+      country: 'Testing',
     },
   };
 

@@ -22,3 +22,21 @@ a {
   text-decoration: none;
   color: #fff;
 }
+
+.main-image {
+  opacity: 0.4;
+}
+
+.item-cards {
+  padding: 0.2rem;
+}
+
+.one-card {
+  padding: 1rem;
+  font-size: 17px;
+  font-weight: 600;
+}
+
+.one-card:nth-child(odd) {
+  background-color: hsla(0, 0%, 88.2%, 0.08);
+}

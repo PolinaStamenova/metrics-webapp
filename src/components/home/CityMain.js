@@ -2,7 +2,7 @@
 
 import React from "react";
 import { useSelector } from "react-redux";
-import spain from "./spainMap.png";
+import spain from "./spain.png";
 import "./Main.css";
 
 const CityMain = () => {
@@ -15,9 +15,9 @@ const CityMain = () => {
   return (
     <div>
       <main>
-        <img className='main-image' src={spain} alt='Spain map' />
+        <img className='main-image' src={spain} alt='Spain' />
         <div className='main-content'>
-          <h1 className='main-content-title'>{city[0].name}</h1>
+          <h3 className='main-content-title'>{city[0].name}</h3>
           <p className='main-content-text'>{city[0].temp}</p>
         </div>
       </main>

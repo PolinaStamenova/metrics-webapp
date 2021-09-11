@@ -21,13 +21,13 @@
   gap: 1rem;
 }
 
-.card:nth-child(4n + 2),
-.card:nth-child(4n + 3) {
+.card:first-child {
   background-color: rgba(0, 0, 0, 0.08);
 }
 
 .city-image {
   max-width: 90px;
+  opacity: 0.4;
 }
 
 .card-images {

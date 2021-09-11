@@ -23,3 +23,13 @@ nav {
   display: flex;
   gap: 1.5rem;
 }
+
+.city-image {
+  width: 50px;
+}
+
+select {
+  padding: 0.2rem;
+  font-size: 16px;
+  margin: 0.5rem;
+}

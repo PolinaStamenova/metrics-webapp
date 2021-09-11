@@ -8,13 +8,11 @@ const CityDetails = () => {
   const city = cityDetails.filter((elem) => elem.name === setCity);
 
   return (
-    <li>
-      <p>{city[0].description}</p>
-      <div className='temperatures'>
-        <p>{city[0].tempMin}</p>
-        <p>{city[0].tempMax}</p>
-      </div>
-    </li>
+    <ul className='item-cards'>
+      <li className='one-card'>{city[0].description}</li>
+      <li className='one-card'>{city[0].tempMin}</li>
+      <li className='one-card'>{city[0].tempMax}</li>
+    </ul>
   );
 };
 
