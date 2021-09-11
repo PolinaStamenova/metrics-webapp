@@ -1,0 +1,17 @@
+main {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 1.875rem;
+  gap: 1.875rem;
+  padding: 24px;
+  font-family: "Lato", sans-serif;
+  font-size: 18px;
+}
+
+.main-image {
+  max-width: 140px;
+}
+
+.main-content-title {
+  text-transform: uppercase;
+}
