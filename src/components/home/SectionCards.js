@@ -1,23 +1,21 @@
-/* eslint-disable quotes, jsx-quotes, no-unused-vars, no-debugger */
+import React from 'react';
+import { Link } from 'react-router-dom';
+import { useSelector, useDispatch } from 'react-redux';
+import { setCity, setCateg } from '../../redux/Reducer';
 
-import React from "react";
-import { Link } from "react-router-dom";
-import { useSelector, useDispatch } from "react-redux";
-import { setCity, setCateg } from "../../redux/Reducer";
-
-import "./SectionCards.css";
-import HomeCards from "./HomeCards";
+import './SectionCards.css';
+import HomeCards from './HomeCards';
 
 const SectionCards = () => {
   const cityDetails = useSelector((state) => state.cities);
   const setCategory = useSelector((state) => state.category);
-  const category = cityDetails.filter((elem) => elem.name === setCategory);
+  // const category = cityDetails.filter((elem) => elem.name === setCategory);
 
   const citiesData = useSelector((state) => state.cities);
   const dispatch = useDispatch();
 
   function filterCity() {
-    if (setCategory !== "") {
+    if (setCategory !== '') {
       return cityDetails.filter((elem) => setCategory === elem.name);
     }
     return cityDetails;
@@ -28,20 +26,20 @@ const SectionCards = () => {
   }
 
   return (
-    <section className='section-cities'>
-      <h5 className='section-cities-title'>Status by cities</h5>
+    <section className="section-cities">
+      <h5 className="section-cities-title">Status by cities</h5>
       <select onChange={(e) => categorySetter(e.target.value)}>
-        <option value=''>--City--</option>
+        <option value="">--City--</option>
         {citiesData.map((city) => (
           <option key={city.name} value={city.name}>
             {city.name}
           </option>
         ))}
       </select>
-      <ul className='cards-list'>
+      <ul className="cards-list">
         {filterCity().map((city) => (
           <Link
-            className='link'
+            className="link"
             to={`/city/${city.name}`}
             id={city.name}
             key={city.name}
