@@ -6,7 +6,6 @@ import { useEffect } from "react";
 import { loadApi } from "./Reducer";
 
 const Api = () => {
-  const data = useSelector((state) => state.cities);
   const dispatch = useDispatch();
 
   const url = "https://api.openweathermap.org/data/2.5/find?";
@@ -25,10 +24,15 @@ const Api = () => {
     const city = await axios
       .all([axiosOulu, axiosHelsinki, axiosTornio])
       .then((res) => {
+        console.log(res);
         res.forEach((item) => item.data.list[0].main.temp);
         const data = res.map((item) => ({
           name: item.data.list[0].name,
           temp: item.data.list[0].main.temp,
+          tempMin: item.data.list[0].main.temp_min,
+          tempMax: item.data.list[0].main.temp_max,
+          description: item.data.list[0].weather[0].description,
+          id: item.data.list[0].id,
         }));
 
         dispatch(loadApi(data));
@@ -38,7 +42,6 @@ const Api = () => {
   useEffect(() => {
     fetchApi();
   }, []);
-
   return "polina";
 };
 
