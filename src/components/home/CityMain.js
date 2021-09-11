@@ -2,7 +2,6 @@
 
 import React from "react";
 import { useSelector } from "react-redux";
-// import PropTypes from "prop-types";
 import spain from "./spainMap.png";
 import "./Main.css";
 
@@ -25,9 +24,5 @@ const CityMain = () => {
     </div>
   );
 };
-// CityMain.propTypes = {
-//   name: PropTypes.string.isRequired,
-//   temp: PropTypes.number.isRequired,
-// };
 
 export default CityMain;

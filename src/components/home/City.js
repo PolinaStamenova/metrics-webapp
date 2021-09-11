@@ -1,8 +1,6 @@
 /* eslint-disable quotes, jsx-quotes */
 
 import React from "react";
-// import PropTypes from "prop-types";
-
 import CityDetails from "./CityDetails";
 
 const City = () => (
@@ -12,12 +10,5 @@ const City = () => (
     </ul>
   </section>
 );
-
-// City.propTypes = {
-//   key: PropTypes.string.isRequired,
-//   tempMin: PropTypes.number.isRequired,
-//   tempMax: PropTypes.number.isRequired,
-//   description: PropTypes.string.isRequired,
-// };
 
 export default City;

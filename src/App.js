@@ -7,19 +7,6 @@ import Home from "./components/home/Home";
 import Details from "./components/Details";
 import Api from "./redux/Api";
 
-// const routes = [
-//   {
-//     path: "/",
-//     name: "Home",
-//     component: Home,
-//   },
-//   {
-//     path: "/c/:name",
-//     name: "Details",
-//     component: Details,
-//   },
-// ];
-
 function App() {
   return (
     <Provider store={store}>
@@ -35,9 +22,3 @@ function App() {
 }
 
 export default App;
-
-// {/* <Switch>
-//   {routes.map(({ path, component }) => (
-//     <Route key={path} exact path={path} component={component} />
-//   ))}
-// </Switch> */}
