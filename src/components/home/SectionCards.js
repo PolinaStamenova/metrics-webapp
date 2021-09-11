@@ -14,7 +14,7 @@ const SectionCards = () => {
       <h5 className='section-cities-title'>Status by cities</h5>
       <ul className='cards-list'>
         {citiesData.map((city) => (
-          <Link className='link' to='/city' key={city.id}>
+          <Link className='link' to={`/city/${city.name}`} key={city.id}>
             <HomeCards
               name={city.name}
               temp={city.temp}

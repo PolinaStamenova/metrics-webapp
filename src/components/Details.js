@@ -13,7 +13,7 @@ const Details = () => (
         <Link className='link' to='/' key='pppp'>
           <p className='nav-arrow'> &#60; </p>
         </Link>
-        <p className='nav-title'>town/city temperature</p>
+        <p className='nav-title'>town/city weather</p>
         <div className='nav-icons'>
           <i className='fas fa-microphone' />
           <i className='fas fa-cog' />
@@ -21,7 +21,7 @@ const Details = () => (
       </nav>
     </header>
     <CityMain />
-    <h5 className='section-cities-title'>Temperature details by city</h5>
+    <h5 className='section-cities-title'>Weather details by city</h5>
     <City />
   </div>
 );
