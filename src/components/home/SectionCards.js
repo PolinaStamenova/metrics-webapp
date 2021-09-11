@@ -17,7 +17,7 @@ const SectionCards = () => {
   const dispatch = useDispatch();
 
   function filterCity() {
-    if (category !== "all") {
+    if (setCategory !== "") {
       return cityDetails.filter((elem) => setCategory === elem.name);
     }
     return cityDetails;
@@ -31,7 +31,7 @@ const SectionCards = () => {
     <section className='section-cities'>
       <h5 className='section-cities-title'>Status by cities</h5>
       <select onChange={(e) => categorySetter(e.target.value)}>
-        <option value='all'>--City--</option>
+        <option value=''>--City--</option>
         {citiesData.map((city) => (
           <option key={city.name} value={city.name}>
             {city.name}
