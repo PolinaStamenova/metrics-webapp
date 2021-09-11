@@ -36,10 +36,8 @@ function App() {
 
 export default App;
 
-// {
-//   /* <Switch>
-//           {routes.map(({ path, component }) => (
-//             <Route key={path} exact path={path} component={component} />
-//           ))}
-//         </Switch> */
-// }
+// {/* <Switch>
+//   {routes.map(({ path, component }) => (
+//     <Route key={path} exact path={path} component={component} />
+//   ))}
+// </Switch> */}

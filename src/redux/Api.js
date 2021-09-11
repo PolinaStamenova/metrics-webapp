@@ -1,7 +1,7 @@
-/* eslint-disable quotes, jsx-quotes, no-unused-vars, no-console, implicit-arrow-linebreak */
+/* eslint-disable quotes, jsx-quotes, no-unused-vars, no-console, implicit-arrow-linebreak, no-debugger, max-len */
 
 import axios from "axios";
-import { useSelector, useDispatch } from "react-redux";
+import { useDispatch } from "react-redux";
 import { useEffect } from "react";
 import { loadApi } from "./Reducer";
 
@@ -24,7 +24,6 @@ const Api = () => {
     const city = await axios
       .all([axiosOulu, axiosHelsinki, axiosTornio])
       .then((res) => {
-        console.log(res);
         res.forEach((item) => item.data.list[0].main.temp);
         const data = res.map((item) => ({
           name: item.data.list[0].name,

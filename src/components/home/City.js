@@ -1,26 +1,23 @@
 /* eslint-disable quotes, jsx-quotes */
 
 import React from "react";
-import { useSelector } from "react-redux";
+// import PropTypes from "prop-types";
+
 import CityDetails from "./CityDetails";
 
-const City = () => {
-  const cityDetails = useSelector((state) => state.cities);
+const City = () => (
+  <section className='section-city'>
+    <ul className='city-cards-list'>
+      <CityDetails />
+    </ul>
+  </section>
+);
 
-  return (
-    <section className='section-city'>
-      <ul className='city-cards-list'>
-        {cityDetails.map((elem) => (
-          <CityDetails
-            key={elem.id}
-            tempMin={elem.tempMin}
-            tempMax={elem.tempMax}
-            description={elem.description}
-          />
-        ))}
-      </ul>
-    </section>
-  );
-};
+// City.propTypes = {
+//   key: PropTypes.string.isRequired,
+//   tempMin: PropTypes.number.isRequired,
+//   tempMax: PropTypes.number.isRequired,
+//   description: PropTypes.string.isRequired,
+// };
 
 export default City;
