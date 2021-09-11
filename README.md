@@ -4,11 +4,19 @@
 
 ## Screenshot of the page
 
-![Screenshot Profile Page](XXXXXXX)
+![screenshot](./src/app.JPG)
 
 ## Project Decription
 
 A mobile web with a list of metrics that can be filtered by the country.
+
+## Live Demo
+
+[Live Demo Link](https://laughing-newton-9afe3e.netlify.app/#/)
+
+## Demo Video
+
+[Live Demo Link](https://www.loom.com/share/f9dc1626a06d4d2da555e00bd3f5bff9)
 
 ## Build With
 

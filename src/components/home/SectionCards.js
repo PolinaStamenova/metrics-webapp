@@ -9,7 +9,6 @@ import HomeCards from './HomeCards';
 const SectionCards = () => {
   const cityDetails = useSelector((state) => state.cities);
   const setCategory = useSelector((state) => state.category);
-  // const category = cityDetails.filter((elem) => elem.name === setCategory);
 
   const citiesData = useSelector((state) => state.cities);
   const dispatch = useDispatch();
