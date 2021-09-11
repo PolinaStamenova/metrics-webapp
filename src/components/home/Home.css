@@ -1,0 +1,35 @@
+header {
+  background-color: rgba(0, 0, 0, 0.06);
+  font-size: 20px;
+  line-height: 1;
+  font-family: "Lato", sans-serif;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 1.2rem 0.5rem;
+}
+
+.nav-arrow {
+  font-weight: 600;
+}
+
+.nav-title {
+  opacity: 0.6;
+}
+
+.nav-icons {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.city-image {
+  width: 50px;
+}
+
+select {
+  padding: 0.2rem;
+  font-size: 16px;
+  margin: 0.5rem;
+}
